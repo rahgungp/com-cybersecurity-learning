@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#0E3D2F"/>
+  <path d="M32 12 L48 19 V32 C48 43 41 50 32 53 C23 50 16 43 16 32 V19 Z" fill="none" stroke="#3FCB9B" stroke-width="2.5"/>
+  <text x="32" y="37" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3FCB9B" font-weight="600">TKOM</text>
+</svg>

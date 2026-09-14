@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minggu 06 — Network Security Fundamentals · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" class="">Home</a>
+      <a href="../index.html#learning-path" class="active">Learning Path</a>
+      <a href="../dashboard.html" class="">Dashboard</a>
+      <a href="../about.html" class="">About</a>
+      <a href="../references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="section" style="padding-top:36px">
+  <div class="wrap detail-layout">
+    
+<aside class="sidebar">
+  <h4>COURSE CONTENT</h4>
+  <ul>
+    <li class="side-item " data-week="week01" onclick="location.href='../weeks/week01.html'">
+          <span class="ic">○</span> Minggu 01 — Introduction to Cybersecurity</li><li class="side-item " data-week="week02" onclick="location.href='../weeks/week02.html'">
+          <span class="ic">○</span> Minggu 02 — Asset, Threat, Vulnerability & Risk</li><li class="side-item " data-week="week03" onclick="location.href='../weeks/week03.html'">
+          <span class="ic">○</span> Minggu 03 — Threat Landscape & Attack Surface</li><li class="side-item " data-week="week04" onclick="location.href='../weeks/week04.html'">
+          <span class="ic">○</span> Minggu 04 — Authentication & Access Control</li><li class="side-item " data-week="week05" onclick="location.href='../weeks/week05.html'">
+          <span class="ic">○</span> Minggu 05 — Cryptography & Data Protection</li><li class="side-item current" data-week="week06" onclick="location.href='../weeks/week06.html'">
+          <span class="ic">○</span> Minggu 06 — Network Security Fundamentals</li><li class="side-item " data-week="week07" onclick="location.href='../weeks/week07.html'">
+          <span class="ic">○</span> Minggu 07 — Secure Architecture & Zero Trust</li><li class="side-item " data-week="week08" onclick="location.href='../weeks/week08.html'">
+          <span class="ic">○</span> Minggu 08 — UTS</li><li class="side-item " data-week="week09" onclick="location.href='../weeks/week09.html'">
+          <span class="ic">○</span> Minggu 09 — Web & Application Security</li><li class="side-item " data-week="week10" onclick="location.href='../weeks/week10.html'">
+          <span class="ic">○</span> Minggu 10 — Endpoint & Malware Security</li><li class="side-item " data-week="week11" onclick="location.href='../weeks/week11.html'">
+          <span class="ic">○</span> Minggu 11 — Vulnerability Management</li><li class="side-item " data-week="week12" onclick="location.href='../weeks/week12.html'">
+          <span class="ic">○</span> Minggu 12 — Security Monitoring & Incident Response</li><li class="side-item " data-week="week13" onclick="location.href='../weeks/week13.html'">
+          <span class="ic">○</span> Minggu 13 — Cyber Attack Lifecycle</li><li class="side-item " data-week="week14" onclick="location.href='../weeks/week14.html'">
+          <span class="ic">○</span> Minggu 14 — Digital Forensics Fundamentals</li><li class="side-item " data-week="week15" onclick="location.href='../weeks/week15.html'">
+          <span class="ic">○</span> Minggu 15 — Current Cybersecurity Trends</li><li class="side-item " data-week="week16" onclick="location.href='../weeks/week16.html'">
+          <span class="ic">○</span> Minggu 16 — Final Project & Security Assessment</li>
+  </ul>
+  <hr class="side-rule">
+  <h4>LEGEND</h4>
+  <div style="font-size:.76rem;color:var(--ink-soft);line-height:2">
+    ✓ Selesai &nbsp;·&nbsp; ◉ Sedang dibuka &nbsp;·&nbsp; ○ Tersedia &nbsp;·&nbsp; 🔒 Coming Soon
+  </div>
+  <hr class="side-rule">
+  <p style="font-size:.76rem">Status materi dikontrol oleh dosen melalui <a href="../admin/login.html" style="color:var(--pine-600)">Admin Panel</a>.</p>
+</aside>
+    <div class="content">
+      <p class="eyebrow">MODULE 06 · MINGGU KE-06</p>
+      <h1>Network Security Fundamentals</h1>
+      <div class="meta-row">
+        <span class="pill">Wireshark</span><span class="pill">Firewall</span>
+        <span class="pill">Output: Packet Analysis</span>
+      </div>
+
+      <div class="block" data-locked-unless="week06:material">
+        <h2>🎯 Learning Objectives</h2>
+        <p>Setelah menyelesaikan materi ini, mahasiswa mampu:</p>
+        <ul style="list-style:disc;margin-left:20px"><li>Menjelaskan dasar TCP/IP, port, DNS, dan HTTP/HTTPS dari sudut pandang keamanan.</li><li>Menjelaskan fungsi firewall, IDS, IPS, VPN, dan network segmentation.</li><li>Membaca dan menganalisis paket jaringan sederhana.</li><li>Mengidentifikasi aktivitas mencurigakan pada traffic jaringan.</li></ul>
+
+        <h2 style="margin-top:1.6em">📖 THEORY</h2>
+        <h3>TCP/IP, Port, dan DNS</h3><p>TCP/IP adalah kumpulan protokol dasar komunikasi internet. Port mengidentifikasi layanan spesifik pada sebuah host (misal port 443 untuk HTTPS). DNS menerjemahkan nama domain menjadi alamat IP — dari sisi keamanan, DNS juga rentan disalahgunakan (misal DNS spoofing) sehingga perlu perlindungan seperti DNSSEC.</p><h3>HTTP/HTTPS</h3><p>HTTP mengirim data dalam bentuk teks biasa yang rentan disadap, sedangkan HTTPS membungkus HTTP dengan TLS sehingga data terenkripsi selama transit. Praktik keamanan modern mewajibkan penggunaan HTTPS untuk seluruh layanan yang menangani data sensitif.</p><h3>Firewall, IDS, IPS</h3><p>Firewall menyaring traffic jaringan berdasarkan aturan (misal alamat IP, port). Intrusion Detection System (IDS) memantau traffic dan memberi peringatan saat mendeteksi pola mencurigakan, tanpa memblokirnya. Intrusion Prevention System (IPS) melangkah lebih jauh dengan secara aktif memblokir traffic yang terdeteksi berbahaya.</p><h3>VPN & Network Segmentation</h3><p>VPN (Virtual Private Network) membuat terowongan terenkripsi antara dua titik jaringan, sering digunakan untuk akses remote yang aman. Network segmentation membagi jaringan menjadi zona-zona terpisah sehingga jika satu segmen dikompromikan, penyerang tidak otomatis mendapat akses ke seluruh jaringan.</p>
+        <div class="diagram"><svg viewBox="0 0 784 110" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--ink-soft)"/></marker></defs><rect x="10" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="76.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Client</text><line x1="142" y1="37.0" x2="168" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="168" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="234.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Switch</text><line x1="300" y1="37.0" x2="326" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="326" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="392.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Firewall</text><line x1="458" y1="37.0" x2="484" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="484" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="550.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Router</text><line x1="616" y1="37.0" x2="642" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="642" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="708.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Internet</text></svg></div>
+        <h3>Example</h3><p>Sebuah kantor menempatkan seluruh printer dan perangkat IoT pada VLAN terpisah dari komputer kerja staf (network segmentation), sehingga jika salah satu printer dikompromikan melalui vulnerability firmware, penyerang tidak dapat langsung menjangkau data di komputer staf.</p>
+        <h3>Case Study</h3><p>Tim keamanan sebuah kampus memeriksa log firewall dan menemukan ratusan percobaan koneksi ke port 3389 (Remote Desktop Protocol) dari berbagai alamat IP luar negeri dalam waktu singkat — pola ini konsisten dengan aktivitas port scanning otomatis yang mencari layanan remote desktop yang terekspos ke internet, dan langsung memicu tim untuk menutup akses RDP dari luar jaringan kampus.</p>
+        <h3>Key Takeaways</h3><ul style="list-style:disc;margin-left:20px"><li>Firewall menyaring, IDS mendeteksi dan memberi peringatan, IPS mendeteksi sekaligus memblokir.</li><li>HTTPS melindungi data in transit melalui TLS; HTTP polos rentan disadap.</li><li>Network segmentation membatasi dampak jika satu segmen jaringan dikompromikan.</li><li>Analisis paket membantu mengenali pola traffic normal vs mencurigakan.</li></ul>
+      </div>
+
+      
+      <div class="block" style="background:var(--signal-soft);border-color:var(--signal)">
+        <h2 style="margin-bottom:6px">READY FOR PRACTICE?</h2>
+        <p>Setelah mempelajari materi minggu ini, lanjutkan ke <strong>Packet Analysis</strong> untuk menerapkan konsep secara hands-on.</p>
+        <a class="btn btn-primary" href="../practical/practical-06.html" data-practice-link>🧪 MULAI PRAKTIK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/notes.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minggu 13 — Cyber Attack Lifecycle · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" class="">Home</a>
+      <a href="../index.html#learning-path" class="active">Learning Path</a>
+      <a href="../dashboard.html" class="">Dashboard</a>
+      <a href="../about.html" class="">About</a>
+      <a href="../references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="section" style="padding-top:36px">
+  <div class="wrap detail-layout">
+    
+<aside class="sidebar">
+  <h4>COURSE CONTENT</h4>
+  <ul>
+    <li class="side-item " data-week="week01" onclick="location.href='../weeks/week01.html'">
+          <span class="ic">○</span> Minggu 01 — Introduction to Cybersecurity</li><li class="side-item " data-week="week02" onclick="location.href='../weeks/week02.html'">
+          <span class="ic">○</span> Minggu 02 — Asset, Threat, Vulnerability & Risk</li><li class="side-item " data-week="week03" onclick="location.href='../weeks/week03.html'">
+          <span class="ic">○</span> Minggu 03 — Threat Landscape & Attack Surface</li><li class="side-item " data-week="week04" onclick="location.href='../weeks/week04.html'">
+          <span class="ic">○</span> Minggu 04 — Authentication & Access Control</li><li class="side-item " data-week="week05" onclick="location.href='../weeks/week05.html'">
+          <span class="ic">○</span> Minggu 05 — Cryptography & Data Protection</li><li class="side-item " data-week="week06" onclick="location.href='../weeks/week06.html'">
+          <span class="ic">○</span> Minggu 06 — Network Security Fundamentals</li><li class="side-item " data-week="week07" onclick="location.href='../weeks/week07.html'">
+          <span class="ic">○</span> Minggu 07 — Secure Architecture & Zero Trust</li><li class="side-item " data-week="week08" onclick="location.href='../weeks/week08.html'">
+          <span class="ic">○</span> Minggu 08 — UTS</li><li class="side-item " data-week="week09" onclick="location.href='../weeks/week09.html'">
+          <span class="ic">○</span> Minggu 09 — Web & Application Security</li><li class="side-item " data-week="week10" onclick="location.href='../weeks/week10.html'">
+          <span class="ic">○</span> Minggu 10 — Endpoint & Malware Security</li><li class="side-item " data-week="week11" onclick="location.href='../weeks/week11.html'">
+          <span class="ic">○</span> Minggu 11 — Vulnerability Management</li><li class="side-item " data-week="week12" onclick="location.href='../weeks/week12.html'">
+          <span class="ic">○</span> Minggu 12 — Security Monitoring & Incident Response</li><li class="side-item current" data-week="week13" onclick="location.href='../weeks/week13.html'">
+          <span class="ic">○</span> Minggu 13 — Cyber Attack Lifecycle</li><li class="side-item " data-week="week14" onclick="location.href='../weeks/week14.html'">
+          <span class="ic">○</span> Minggu 14 — Digital Forensics Fundamentals</li><li class="side-item " data-week="week15" onclick="location.href='../weeks/week15.html'">
+          <span class="ic">○</span> Minggu 15 — Current Cybersecurity Trends</li><li class="side-item " data-week="week16" onclick="location.href='../weeks/week16.html'">
+          <span class="ic">○</span> Minggu 16 — Final Project & Security Assessment</li>
+  </ul>
+  <hr class="side-rule">
+  <h4>LEGEND</h4>
+  <div style="font-size:.76rem;color:var(--ink-soft);line-height:2">
+    ✓ Selesai &nbsp;·&nbsp; ◉ Sedang dibuka &nbsp;·&nbsp; ○ Tersedia &nbsp;·&nbsp; 🔒 Coming Soon
+  </div>
+  <hr class="side-rule">
+  <p style="font-size:.76rem">Status materi dikontrol oleh dosen melalui <a href="../admin/login.html" style="color:var(--pine-600)">Admin Panel</a>.</p>
+</aside>
+    <div class="content">
+      <p class="eyebrow">MODULE 13 · MINGGU KE-13</p>
+      <h1>Cyber Attack Lifecycle</h1>
+      <div class="meta-row">
+        <span class="pill">MITRE ATT&CK</span>
+        <span class="pill">Output: Attack-Chain Mapping</span>
+      </div>
+
+      <div class="block" data-locked-unless="week13:material">
+        <h2>🎯 Learning Objectives</h2>
+        <p>Setelah menyelesaikan materi ini, mahasiswa mampu:</p>
+        <ul style="list-style:disc;margin-left:20px"><li>Menjelaskan tahapan cyber attack lifecycle secara konseptual.</li><li>Menghubungkan setiap tahap serangan dengan tactics dan techniques MITRE ATT&CK.</li><li>Memetakan skenario insiden ke dalam attack chain yang terstruktur.</li><li>Mengusulkan deteksi dan mitigasi untuk tiap tahap serangan.</li></ul>
+
+        <h2 style="margin-top:1.6em">📖 THEORY</h2>
+        <h3>Tahapan Cyber Attack Lifecycle</h3><p>Reconnaissance: penyerang mengumpulkan informasi tentang target. Initial Access: penyerang mendapatkan pijakan awal (misal melalui phishing). Execution: menjalankan kode berbahaya pada sistem target. Persistence: memastikan tetap memiliki akses meski sistem di-restart. Privilege Escalation: meningkatkan hak akses dari user biasa menjadi admin/root. Lateral Movement: berpindah ke sistem lain dalam jaringan yang sama. Exfiltration: mencuri data keluar dari jaringan target. Impact: dampak akhir yang dirasakan organisasi, misal enkripsi data atau gangguan layanan.</p><h3>Menghubungkan dengan MITRE ATT&CK</h3><p>Setiap tahapan attack lifecycle di atas dapat dipetakan ke Tactics dalam MITRE ATT&CK, dan setiap tactic memiliki beberapa Techniques spesifik yang mendeskripsikan cara umum penyerang mencapai tujuan tersebut. Pemetaan ini membantu tim keamanan merancang deteksi dan mitigasi yang ditargetkan pada tiap tahap, bukan hanya bereaksi setelah dampak terjadi.</p>
+        <div class="diagram"><svg viewBox="0 0 626 210" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--ink-soft)"/></marker></defs><rect x="10" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="76.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Reconnaissance</text><line x1="142" y1="37.0" x2="168" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="168" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="234.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Initial Access</text><line x1="300" y1="37.0" x2="326" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="326" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="392.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Execution</text><line x1="458" y1="37.0" x2="484" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="484" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="550.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Persistence</text><line x1="76.0" y1="64" x2="76.0" y2="110" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="10" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="76.0" y="130.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Privilege</text><text x="76.0" y="144.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Escalation</text><line x1="142" y1="137.0" x2="168" y2="137.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="168" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="234.0" y="130.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Lateral</text><text x="234.0" y="144.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Movement</text><line x1="300" y1="137.0" x2="326" y2="137.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="326" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="392.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Exfiltration</text><line x1="458" y1="137.0" x2="484" y2="137.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="484" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="550.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Impact</text></svg></div>
+        <h3>Example</h3><p>Pada sebuah insiden, penyerang memulai dengan mengumpulkan informasi karyawan dari LinkedIn (Reconnaissance), mengirim email phishing bertarget (Initial Access), menjalankan skrip berbahaya saat lampiran dibuka (Execution), menanamkan diri pada startup registry (Persistence), lalu memanfaatkan kredensial admin lokal yang lemah untuk privilege escalation, sebelum akhirnya bergerak ke server file (Lateral Movement) dan mengunggah data ke luar (Exfiltration).</p>
+        <h3>Case Study</h3><p>Tim respons insiden menganalisis serangan pada sebuah perusahaan dan berhasil memetakan setiap tahap ke MITRE ATT&CK: Initial Access melalui phishing attachment, Execution melalui macro berbahaya, dan Lateral Movement menggunakan kredensial yang dicuri dari satu komputer untuk mengakses server file bersama. Pemetaan ini membantu tim menentukan bahwa deteksi paling efektif untuk mencegah insiden serupa adalah memperkuat filter email dan menonaktifkan macro secara default, alih-alih hanya berfokus pada tahap akhir (Impact).</p>
+        <h3>Key Takeaways</h3><ul style="list-style:disc;margin-left:20px"><li>Cyber attack lifecycle menggambarkan tahapan serangan dari awal hingga dampak akhir.</li><li>Setiap tahap dapat dipetakan ke Tactics & Techniques MITRE ATT&CK untuk analisis terstruktur.</li><li>Deteksi dini pada tahap awal (Reconnaissance/Initial Access) jauh lebih murah dibanding menangani Impact.</li><li>Memahami attack chain membantu merancang kontrol yang tepat sasaran di setiap tahap.</li></ul>
+      </div>
+
+      
+      <div class="block" style="background:var(--signal-soft);border-color:var(--signal)">
+        <h2 style="margin-bottom:6px">READY FOR PRACTICE?</h2>
+        <p>Setelah mempelajari materi minggu ini, lanjutkan ke <strong>Attack Chain Mapping</strong> untuk menerapkan konsep secara hands-on.</p>
+        <a class="btn btn-primary" href="../practical/practical-13.html" data-practice-link>🧪 MULAI PRAKTIK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/notes.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

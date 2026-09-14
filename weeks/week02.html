@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minggu 02 — Asset, Threat, Vulnerability & Risk · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" class="">Home</a>
+      <a href="../index.html#learning-path" class="active">Learning Path</a>
+      <a href="../dashboard.html" class="">Dashboard</a>
+      <a href="../about.html" class="">About</a>
+      <a href="../references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="section" style="padding-top:36px">
+  <div class="wrap detail-layout">
+    
+<aside class="sidebar">
+  <h4>COURSE CONTENT</h4>
+  <ul>
+    <li class="side-item " data-week="week01" onclick="location.href='../weeks/week01.html'">
+          <span class="ic">○</span> Minggu 01 — Introduction to Cybersecurity</li><li class="side-item current" data-week="week02" onclick="location.href='../weeks/week02.html'">
+          <span class="ic">○</span> Minggu 02 — Asset, Threat, Vulnerability & Risk</li><li class="side-item " data-week="week03" onclick="location.href='../weeks/week03.html'">
+          <span class="ic">○</span> Minggu 03 — Threat Landscape & Attack Surface</li><li class="side-item " data-week="week04" onclick="location.href='../weeks/week04.html'">
+          <span class="ic">○</span> Minggu 04 — Authentication & Access Control</li><li class="side-item " data-week="week05" onclick="location.href='../weeks/week05.html'">
+          <span class="ic">○</span> Minggu 05 — Cryptography & Data Protection</li><li class="side-item " data-week="week06" onclick="location.href='../weeks/week06.html'">
+          <span class="ic">○</span> Minggu 06 — Network Security Fundamentals</li><li class="side-item " data-week="week07" onclick="location.href='../weeks/week07.html'">
+          <span class="ic">○</span> Minggu 07 — Secure Architecture & Zero Trust</li><li class="side-item " data-week="week08" onclick="location.href='../weeks/week08.html'">
+          <span class="ic">○</span> Minggu 08 — UTS</li><li class="side-item " data-week="week09" onclick="location.href='../weeks/week09.html'">
+          <span class="ic">○</span> Minggu 09 — Web & Application Security</li><li class="side-item " data-week="week10" onclick="location.href='../weeks/week10.html'">
+          <span class="ic">○</span> Minggu 10 — Endpoint & Malware Security</li><li class="side-item " data-week="week11" onclick="location.href='../weeks/week11.html'">
+          <span class="ic">○</span> Minggu 11 — Vulnerability Management</li><li class="side-item " data-week="week12" onclick="location.href='../weeks/week12.html'">
+          <span class="ic">○</span> Minggu 12 — Security Monitoring & Incident Response</li><li class="side-item " data-week="week13" onclick="location.href='../weeks/week13.html'">
+          <span class="ic">○</span> Minggu 13 — Cyber Attack Lifecycle</li><li class="side-item " data-week="week14" onclick="location.href='../weeks/week14.html'">
+          <span class="ic">○</span> Minggu 14 — Digital Forensics Fundamentals</li><li class="side-item " data-week="week15" onclick="location.href='../weeks/week15.html'">
+          <span class="ic">○</span> Minggu 15 — Current Cybersecurity Trends</li><li class="side-item " data-week="week16" onclick="location.href='../weeks/week16.html'">
+          <span class="ic">○</span> Minggu 16 — Final Project & Security Assessment</li>
+  </ul>
+  <hr class="side-rule">
+  <h4>LEGEND</h4>
+  <div style="font-size:.76rem;color:var(--ink-soft);line-height:2">
+    ✓ Selesai &nbsp;·&nbsp; ◉ Sedang dibuka &nbsp;·&nbsp; ○ Tersedia &nbsp;·&nbsp; 🔒 Coming Soon
+  </div>
+  <hr class="side-rule">
+  <p style="font-size:.76rem">Status materi dikontrol oleh dosen melalui <a href="../admin/login.html" style="color:var(--pine-600)">Admin Panel</a>.</p>
+</aside>
+    <div class="content">
+      <p class="eyebrow">MODULE 02 · MINGGU KE-02</p>
+      <h1>Asset, Threat, Vulnerability & Risk</h1>
+      <div class="meta-row">
+        <span class="pill">NIST CSF</span><span class="pill">Risk Matrix</span>
+        <span class="pill">Output: Risk Assessment Sederhana</span>
+      </div>
+
+      <div class="block" data-locked-unless="week02:material">
+        <h2>🎯 Learning Objectives</h2>
+        <p>Setelah menyelesaikan materi ini, mahasiswa mampu:</p>
+        <ul style="list-style:disc;margin-left:20px"><li>Menjelaskan hubungan antara asset, threat, vulnerability, exploit, attack, impact, dan risk.</li><li>Menjelaskan konsep security control sebagai mitigasi risiko.</li><li>Menggunakan risk matrix (likelihood × impact) untuk menentukan level risiko.</li><li>Melakukan basic risk assessment terhadap skenario sederhana.</li></ul>
+
+        <h2 style="margin-top:1.6em">📖 THEORY</h2>
+        <h3>Rantai Konsep: Asset ke Risk</h3><p>Sebuah aset (asset) memiliki nilai bagi organisasi. Ancaman (threat) adalah potensi kejadian yang dapat merugikan aset tersebut. Kerentanan (vulnerability) adalah kelemahan pada aset yang dapat dimanfaatkan. Ketika threat memanfaatkan vulnerability melalui sebuah exploit, terjadilah attack, yang menghasilkan impact terhadap organisasi. Kombinasi kemungkinan (likelihood) dan dampak (impact) menentukan risk, yang kemudian dikelola melalui security control.</p><h3>Threat Actor</h3><p>Threat actor adalah pihak yang berpotensi melancarkan ancaman — mulai dari individu iseng (script kiddie), kelompok kriminal siber yang mencari keuntungan finansial, hingga insider (karyawan atau mantan karyawan) yang memiliki akses sah namun disalahgunakan.</p><h3>Vulnerability & Exploit</h3><p>Vulnerability adalah celah — bisa berupa kesalahan konfigurasi, software yang belum di-patch, atau kelemahan proses. Exploit adalah cara atau alat yang digunakan untuk memanfaatkan vulnerability tersebut agar menghasilkan akses atau dampak yang tidak diinginkan.</p><h3>Risk Matrix</h3><p>Risk matrix adalah alat sederhana untuk memprioritaskan risiko dengan mengalikan (secara kualitatif) Likelihood (kemungkinan terjadi) dan Impact (dampak jika terjadi), masing-masing dikategorikan Low/Medium/High. Risiko dengan Likelihood dan Impact tinggi menjadi prioritas utama untuk dimitigasi.</p><h3>Security Control</h3><p>Security control adalah langkah yang diambil untuk mengurangi risiko — dapat berupa kontrol preventif (mencegah, misal firewall), detektif (mendeteksi, misal IDS), atau korektif (memulihkan, misal backup dan disaster recovery).</p>
+        <div class="diagram"><svg viewBox="0 0 626 210" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--ink-soft)"/></marker></defs><rect x="10" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="76.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Asset</text><line x1="142" y1="37.0" x2="168" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="168" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="234.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Threat</text><line x1="300" y1="37.0" x2="326" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="326" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="392.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Vulnerability</text><line x1="458" y1="37.0" x2="484" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="484" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="550.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Exploit</text><line x1="76.0" y1="64" x2="76.0" y2="110" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="10" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="76.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Attack</text><line x1="142" y1="137.0" x2="168" y2="137.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="168" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="234.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Impact</text><line x1="300" y1="137.0" x2="326" y2="137.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="326" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="392.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Risk</text><line x1="458" y1="137.0" x2="484" y2="137.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="484" y="110" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="550.0" y="130.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Security</text><text x="550.0" y="144.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Control</text></svg></div>
+        <h3>Example</h3><p>Sebuah server web (asset) memiliki software CMS yang belum di-update (vulnerability). Kelompok cybercrime (threat actor) menggunakan exploit publik yang menargetkan versi CMS tersebut (exploit) untuk melakukan defacement (attack), menyebabkan reputasi organisasi menurun (impact).</p>
+        <h3>Case Study</h3><p>Sebuah toko online menyimpan data pelanggan pada database yang dapat diakses tanpa autentikasi kuat dari jaringan internal. Setelah dinilai menggunakan risk matrix, tim keamanan menentukan likelihood MEDIUM (karena memerlukan akses internal) namun impact HIGH (data pelanggan dalam jumlah besar), sehingga risiko keseluruhan dikategorikan HIGH dan diprioritaskan untuk ditambahkan autentikasi database serta pembatasan akses jaringan.</p>
+        <h3>Key Takeaways</h3><ul style="list-style:disc;margin-left:20px"><li>Risiko terbentuk dari rantai: asset → threat → vulnerability → exploit → attack → impact.</li><li>Risk = fungsi dari likelihood dan impact, divisualisasikan lewat risk matrix.</li><li>Security control dipilih untuk mengurangi likelihood, impact, atau keduanya.</li><li>Tidak semua risiko perlu direspons dengan cara sama — prioritas ditentukan level risikonya.</li></ul>
+      </div>
+
+      
+      <div class="block" style="background:var(--signal-soft);border-color:var(--signal)">
+        <h2 style="margin-bottom:6px">READY FOR PRACTICE?</h2>
+        <p>Setelah mempelajari materi minggu ini, lanjutkan ke <strong>Basic Risk Assessment</strong> untuk menerapkan konsep secara hands-on.</p>
+        <a class="btn btn-primary" href="../practical/practical-02.html" data-practice-link>🧪 MULAI PRAKTIK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/notes.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

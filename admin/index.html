@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a href="../index.html" class="brand"><span class="mark">COM</span><span class="name">Cybersecurity Learning<small>Admin</small></span></a>
+  <div class="nav-actions">
+    <button class="icon-btn" data-theme-toggle>🌙</button>
+    <button class="btn btn-outline btn-sm" id="logout-btn">Logout</button>
+  </div>
+</div></nav>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">ADMIN PANEL</p>
+    <h1 style="font-size:1.6rem">Content Control — Publish / Hide</h1>
+    <p>Tabel di bawah menampilkan status Materi dan Praktik untuk seluruh 16 minggu. Klik <strong>Toggle</strong> untuk preview instan Publish ⇄ Hide pada browser ini.</p>
+
+    <div class="callout">
+      <strong>Cara permanen (direkomendasikan):</strong> buka <code>assets/js/course-config.js</code>, cari minggu yang ingin diubah, lalu ubah <code>material: false</code> / <code>practice: false</code> menjadi <code>true</code> (atau sebaliknya untuk menyembunyikan kembali), lalu simpan &amp; commit. Perubahan pada file ini berlaku untuk <strong>semua pengunjung</strong> setelah di-deploy.<br><br>
+      Tombol <strong>Toggle</strong> di bawah hanya membuat <em>preview override</em> pada browser ini saja (localStorage) — cocok untuk mendemokan tampilan Publish/Hide dengan cepat, tapi <strong>tidak</strong> mengubah file dan tidak terlihat oleh mahasiswa lain.
+    </div>
+
+    <div class="block">
+      <div style="overflow-x:auto">
+      <table class="admin-table">
+        <thead><tr><th>Minggu</th><th>Modul</th><th>Materi</th><th>Praktik</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>Minggu 01</td>
+          <td>Introduction to Cybersecurity</td>
+          <td>
+            <span class="pill" data-status-label="week01:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week01:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week01:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week01:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 02</td>
+          <td>Asset, Threat, Vulnerability & Risk</td>
+          <td>
+            <span class="pill" data-status-label="week02:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week02:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week02:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week02:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 03</td>
+          <td>Threat Landscape & Attack Surface</td>
+          <td>
+            <span class="pill" data-status-label="week03:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week03:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week03:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week03:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 04</td>
+          <td>Authentication & Access Control</td>
+          <td>
+            <span class="pill" data-status-label="week04:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week04:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week04:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week04:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 05</td>
+          <td>Cryptography & Data Protection</td>
+          <td>
+            <span class="pill" data-status-label="week05:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week05:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week05:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week05:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 06</td>
+          <td>Network Security Fundamentals</td>
+          <td>
+            <span class="pill" data-status-label="week06:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week06:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week06:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week06:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 07</td>
+          <td>Secure Architecture & Zero Trust</td>
+          <td>
+            <span class="pill" data-status-label="week07:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week07:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week07:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week07:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 08</td>
+          <td>UTS</td>
+          <td>
+            <span class="pill" data-status-label="week08:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week08:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week08:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week08:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 09</td>
+          <td>Web & Application Security</td>
+          <td>
+            <span class="pill" data-status-label="week09:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week09:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week09:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week09:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 10</td>
+          <td>Endpoint & Malware Security</td>
+          <td>
+            <span class="pill" data-status-label="week10:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week10:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week10:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week10:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 11</td>
+          <td>Vulnerability Management</td>
+          <td>
+            <span class="pill" data-status-label="week11:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week11:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week11:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week11:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 12</td>
+          <td>Security Monitoring & Incident Response</td>
+          <td>
+            <span class="pill" data-status-label="week12:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week12:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week12:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week12:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 13</td>
+          <td>Cyber Attack Lifecycle</td>
+          <td>
+            <span class="pill" data-status-label="week13:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week13:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week13:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week13:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 14</td>
+          <td>Digital Forensics Fundamentals</td>
+          <td>
+            <span class="pill" data-status-label="week14:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week14:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week14:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week14:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 15</td>
+          <td>Current Cybersecurity Trends</td>
+          <td>
+            <span class="pill" data-status-label="week15:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week15:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week15:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week15:practice">Toggle</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minggu 16</td>
+          <td>Final Project & Security Assessment</td>
+          <td>
+            <span class="pill" data-status-label="week16:material">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week16:material">Toggle</button>
+          </td>
+          <td>
+            <span class="pill" data-status-label="week16:practice">—</span>
+            <button class="btn btn-sm btn-outline" data-toggle="week16:practice">Toggle</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-outline btn-sm" id="reset-btn">Reset Preview Override</button>
+        <a class="btn btn-outline btn-sm" href="../index.html">Lihat Situs</a>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>Catatan Keamanan:</strong> Panel ini adalah demonstrasi alur admin untuk static website (GitHub Pages) dan tidak memiliki autentikasi sungguhan. Status publikasi permanen disimpan di <code>course-config.js</code> (bagian dari kode sumber, publik jika repo publik); preview override tersimpan di localStorage browser ini dan dapat diubah siapa pun lewat devtools. Untuk kontrol akses yang sesungguhnya, integrasikan Firebase Authentication + Firestore atau Supabase Auth + Database sebagai backend admin.
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

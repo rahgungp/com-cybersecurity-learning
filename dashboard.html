@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+      <a href="index.html#learning-path" class="">Learning Path</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="about.html" class="">About</a>
+      <a href="references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">DASHBOARD</p>
+    <h1 style="font-size:1.9rem">Selamat datang kembali!</h1>
+    <p>Ringkasan progres belajar kamu pada mata kuliah Keamanan Siber — 16 minggu.</p>
+
+    <div class="stat-row" style="margin-top:28px">
+      <div class="stat"><strong data-progress-overall>0%</strong><span>Overall Progress</span></div>
+      <div class="stat"><strong id="active-count">—</strong><span>Modul Aktif (bukan Coming Soon)</span></div>
+      <div class="stat"><strong id="bm-count">0</strong><span>Materi Disimpan</span></div>
+    </div>
+
+    <div class="dash-grid">
+      <div>
+        <div class="block">
+          <h2>Continue Learning</h2>
+          <div id="continue-card"></div>
+        </div>
+        <div class="block">
+          <h2>Recent Activity</h2>
+          <div class="activity-item"><span>🎓</span><div>Mendaftar mata kuliah <strong>Keamanan Siber (P)</strong></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="block">
+          <h2>Saved Materials</h2>
+          <div data-bookmarks-list></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+      <a href="admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/course-config.js"></script>
+<script src="assets/js/content-control.js"></script>
+<script src="assets/js/progress.js"></script>
+<script src="assets/js/notes.js"></script>
+<script src="assets/js/quiz.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const active = Object.keys(window.ComContent.baseConfig()).filter(id => window.refreshWeekStatusUI && true);
+  // recompute active (non-locked) weeks using live status
+  const activeIds = Object.keys(window.ComContent.baseConfig()).filter(id => {
+    const matOn = window.ComContent.isPublished(id, "material");
+    const pracOn = window.ComContent.isPublished(id, "practice");
+    return matOn || pracOn;
+  });
+  document.getElementById("active-count").textContent = activeIds.length + " / 16";
+  const bmCount = document.querySelector("#bm-count");
+  if(bmCount && window.ComNotes) bmCount.textContent = window.ComNotes.readBookmarks().length;
+
+  // find first active week with incomplete progress as "continue learning"
+  const cont = document.getElementById("continue-card");
+  let target = null;
+  for(const id of activeIds){
+    const p = window.ComProgress.get(id);
+    if(!(p.theory && p.practice)){ target = id; break; }
+  }
+  if(target){
+    const title = window.ComContent.weekTitle(target);
+    const num = target.replace("week","");
+    cont.innerHTML = `
+      <div class="card" data-status="learning">
+        <div class="card-top"><span class="card-num">MINGGU ${num}</span><span class="badge badge-learning">In Progress</span></div>
+        <h3>${title}</h3>
+        <div class="progress-track" data-progress-bar="${target}"><div class="progress-fill" style="width:0%"></div></div>
+        <div class="card-foot">
+          <span data-progress-label style="font-family:var(--font-mono);font-size:.78rem;color:var(--ink-soft)">0%</span>
+          <a class="btn btn-sm btn-primary" href="weeks/${target}.html">Continue</a>
+        </div>
+      </div>`;
+  } else {
+    cont.innerHTML = `<p>Semua modul aktif sudah selesai — mantap! Nantikan modul berikutnya dibuka dosen.</p>`;
+  }
+  if(window.ComProgress){
+    document.querySelectorAll("[data-progress-bar]").forEach(bar => {
+      const id = bar.getAttribute("data-progress-bar");
+      if(id.startsWith("skill:")) return;
+      const pct = window.ComProgress.weekPercent(id, false);
+      const fill = bar.querySelector(".progress-fill");
+      if(fill) fill.style.width = pct + "%";
+      const label = bar.parentElement.querySelector("[data-progress-label]");
+      if(label) label.textContent = pct + "%";
+    });
+    const el = document.querySelector("[data-progress-overall]");
+    if(el) el.textContent = window.ComProgress.overallPercent(activeIds) + "%";
+  }
+});
+</script>
+</body>
+</html>

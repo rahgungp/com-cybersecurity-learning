@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praktik Minggu 04 — Authentication & Access Control · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" class="">Home</a>
+      <a href="../index.html#learning-path" class="active">Learning Path</a>
+      <a href="../dashboard.html" class="">Dashboard</a>
+      <a href="../about.html" class="">About</a>
+      <a href="../references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="section" style="padding-top:36px">
+  <div class="wrap detail-layout">
+    
+<aside class="sidebar">
+  <h4>COURSE CONTENT</h4>
+  <ul>
+    <li class="side-item " data-week="week01" onclick="location.href='../weeks/week01.html'">
+          <span class="ic">○</span> Minggu 01 — Introduction to Cybersecurity</li><li class="side-item " data-week="week02" onclick="location.href='../weeks/week02.html'">
+          <span class="ic">○</span> Minggu 02 — Asset, Threat, Vulnerability & Risk</li><li class="side-item " data-week="week03" onclick="location.href='../weeks/week03.html'">
+          <span class="ic">○</span> Minggu 03 — Threat Landscape & Attack Surface</li><li class="side-item current" data-week="week04" onclick="location.href='../weeks/week04.html'">
+          <span class="ic">○</span> Minggu 04 — Authentication & Access Control</li><li class="side-item " data-week="week05" onclick="location.href='../weeks/week05.html'">
+          <span class="ic">○</span> Minggu 05 — Cryptography & Data Protection</li><li class="side-item " data-week="week06" onclick="location.href='../weeks/week06.html'">
+          <span class="ic">○</span> Minggu 06 — Network Security Fundamentals</li><li class="side-item " data-week="week07" onclick="location.href='../weeks/week07.html'">
+          <span class="ic">○</span> Minggu 07 — Secure Architecture & Zero Trust</li><li class="side-item " data-week="week08" onclick="location.href='../weeks/week08.html'">
+          <span class="ic">○</span> Minggu 08 — UTS</li><li class="side-item " data-week="week09" onclick="location.href='../weeks/week09.html'">
+          <span class="ic">○</span> Minggu 09 — Web & Application Security</li><li class="side-item " data-week="week10" onclick="location.href='../weeks/week10.html'">
+          <span class="ic">○</span> Minggu 10 — Endpoint & Malware Security</li><li class="side-item " data-week="week11" onclick="location.href='../weeks/week11.html'">
+          <span class="ic">○</span> Minggu 11 — Vulnerability Management</li><li class="side-item " data-week="week12" onclick="location.href='../weeks/week12.html'">
+          <span class="ic">○</span> Minggu 12 — Security Monitoring & Incident Response</li><li class="side-item " data-week="week13" onclick="location.href='../weeks/week13.html'">
+          <span class="ic">○</span> Minggu 13 — Cyber Attack Lifecycle</li><li class="side-item " data-week="week14" onclick="location.href='../weeks/week14.html'">
+          <span class="ic">○</span> Minggu 14 — Digital Forensics Fundamentals</li><li class="side-item " data-week="week15" onclick="location.href='../weeks/week15.html'">
+          <span class="ic">○</span> Minggu 15 — Current Cybersecurity Trends</li><li class="side-item " data-week="week16" onclick="location.href='../weeks/week16.html'">
+          <span class="ic">○</span> Minggu 16 — Final Project & Security Assessment</li>
+  </ul>
+  <hr class="side-rule">
+  <h4>LEGEND</h4>
+  <div style="font-size:.76rem;color:var(--ink-soft);line-height:2">
+    ✓ Selesai &nbsp;·&nbsp; ◉ Sedang dibuka &nbsp;·&nbsp; ○ Tersedia &nbsp;·&nbsp; 🔒 Coming Soon
+  </div>
+  <hr class="side-rule">
+  <p style="font-size:.76rem">Status materi dikontrol oleh dosen melalui <a href="../admin/login.html" style="color:var(--pine-600)">Admin Panel</a>.</p>
+</aside>
+    <div class="content">
+      <p class="eyebrow">PRACTICAL LAB · MINGGU 04</p>
+      <h1>Authentication & Access Control</h1>
+
+      <div class="block" data-locked-unless="week04:practice">
+        
+        <h2 style="margin-top:0">🧪 Access Control Analysis</h2>
+        <div class="meta-row"><span class="pill">⏱ 45–60 menit</span><span class="pill">Referensi Output: Access-Control Analysis</span></div>
+
+        <h3>Objective</h3>
+        <p>Mahasiswa mampu menganalisis mekanisme authentication dan authorization pada sebuah sistem serta mengevaluasi kesesuaiannya dengan prinsip least privilege.</p>
+
+        <h3>Scenario</h3>
+        <p>Sebuah aplikasi manajemen tugas kampus memiliki tiga jenis pengguna: Mahasiswa, Dosen, dan Admin Akademik. Saat ini seluruh pengguna login dengan password saja, dan seluruh dosen memiliki akses yang sama seperti admin akademik.</p>
+
+        <h3>Tools</h3>
+        <ul style="list-style:disc;margin-left:20px"><li>Worksheet access-control (disediakan)</li></ul>
+
+        <h3>Environment</h3>
+        <div class="callout warn">Analisis berbasis skenario tertulis, tidak memerlukan akses sistem nyata.</div>
+
+        <h3>Instructions</h3>
+        <ol style="margin-left:20px"><li>Identifikasi siapa saja user dan apa role masing-masing.</li><li>Identifikasi resource yang perlu dilindungi (misal: nilai, jadwal, data pribadi).</li><li>Tentukan permission yang seharusnya dimiliki tiap role berdasarkan least privilege.</li><li>Evaluasi mekanisme authentication saat ini dan usulkan perbaikan (misal MFA).</li><li>Evaluasi mekanisme authorization saat ini dan usulkan perbaikan (misal RBAC).</li></ol>
+
+        <h3>Expected Output</h3>
+        <p>Tabel role-permission (RBAC matrix sederhana) dan rekomendasi perbaikan authentication & authorization.</p>
+
+        <h3>Analysis</h3>
+        <ul style="list-style:disc;margin-left:20px"><li>Risiko apa yang muncul karena dosen memiliki akses setara admin akademik?</li><li>Apakah MFA perlu diterapkan untuk semua role, atau cukup role tertentu? Jelaskan.</li></ul>
+
+        <h3>Questions</h3>
+        <ol style="margin-left:20px"><li>Berikan satu contoh authorization yang salah meskipun authentication berhasil.</li><li>Apa risiko keamanan jika least privilege tidak diterapkan pada sistem ini?</li></ol>
+
+        <h3>Assignment</h3>
+        <p>Susun Access-Control Analysis Report berisi RBAC matrix dan rekomendasi authentication/authorization.</p>
+
+        <h3>Checklist</h3>
+        <ul style="list-style:none;margin-left:0"><li><label><input type="checkbox"> User & role teridentifikasi</label></li><li><label><input type="checkbox"> RBAC matrix dibuat</label></li><li><label><input type="checkbox"> Rekomendasi authentication disertakan</label></li><li><label><input type="checkbox"> Rekomendasi authorization disertakan</label></li></ul>
+
+        <button class="btn btn-primary" data-complete="week04:practice" data-complete-label="Practice Completed ✓">Complete Practice</button>
+    
+      </div>
+
+      <div class="block" style="display:flex;justify-content:space-between">
+        <a class="btn btn-outline" href="../weeks/week04.html">← Kembali ke Materi Minggu 04</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/notes.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

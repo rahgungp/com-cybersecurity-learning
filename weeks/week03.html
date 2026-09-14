@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minggu 03 — Threat Landscape & Attack Surface · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" class="">Home</a>
+      <a href="../index.html#learning-path" class="active">Learning Path</a>
+      <a href="../dashboard.html" class="">Dashboard</a>
+      <a href="../about.html" class="">About</a>
+      <a href="../references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="section" style="padding-top:36px">
+  <div class="wrap detail-layout">
+    
+<aside class="sidebar">
+  <h4>COURSE CONTENT</h4>
+  <ul>
+    <li class="side-item " data-week="week01" onclick="location.href='../weeks/week01.html'">
+          <span class="ic">○</span> Minggu 01 — Introduction to Cybersecurity</li><li class="side-item " data-week="week02" onclick="location.href='../weeks/week02.html'">
+          <span class="ic">○</span> Minggu 02 — Asset, Threat, Vulnerability & Risk</li><li class="side-item current" data-week="week03" onclick="location.href='../weeks/week03.html'">
+          <span class="ic">○</span> Minggu 03 — Threat Landscape & Attack Surface</li><li class="side-item " data-week="week04" onclick="location.href='../weeks/week04.html'">
+          <span class="ic">○</span> Minggu 04 — Authentication & Access Control</li><li class="side-item " data-week="week05" onclick="location.href='../weeks/week05.html'">
+          <span class="ic">○</span> Minggu 05 — Cryptography & Data Protection</li><li class="side-item " data-week="week06" onclick="location.href='../weeks/week06.html'">
+          <span class="ic">○</span> Minggu 06 — Network Security Fundamentals</li><li class="side-item " data-week="week07" onclick="location.href='../weeks/week07.html'">
+          <span class="ic">○</span> Minggu 07 — Secure Architecture & Zero Trust</li><li class="side-item " data-week="week08" onclick="location.href='../weeks/week08.html'">
+          <span class="ic">○</span> Minggu 08 — UTS</li><li class="side-item " data-week="week09" onclick="location.href='../weeks/week09.html'">
+          <span class="ic">○</span> Minggu 09 — Web & Application Security</li><li class="side-item " data-week="week10" onclick="location.href='../weeks/week10.html'">
+          <span class="ic">○</span> Minggu 10 — Endpoint & Malware Security</li><li class="side-item " data-week="week11" onclick="location.href='../weeks/week11.html'">
+          <span class="ic">○</span> Minggu 11 — Vulnerability Management</li><li class="side-item " data-week="week12" onclick="location.href='../weeks/week12.html'">
+          <span class="ic">○</span> Minggu 12 — Security Monitoring & Incident Response</li><li class="side-item " data-week="week13" onclick="location.href='../weeks/week13.html'">
+          <span class="ic">○</span> Minggu 13 — Cyber Attack Lifecycle</li><li class="side-item " data-week="week14" onclick="location.href='../weeks/week14.html'">
+          <span class="ic">○</span> Minggu 14 — Digital Forensics Fundamentals</li><li class="side-item " data-week="week15" onclick="location.href='../weeks/week15.html'">
+          <span class="ic">○</span> Minggu 15 — Current Cybersecurity Trends</li><li class="side-item " data-week="week16" onclick="location.href='../weeks/week16.html'">
+          <span class="ic">○</span> Minggu 16 — Final Project & Security Assessment</li>
+  </ul>
+  <hr class="side-rule">
+  <h4>LEGEND</h4>
+  <div style="font-size:.76rem;color:var(--ink-soft);line-height:2">
+    ✓ Selesai &nbsp;·&nbsp; ◉ Sedang dibuka &nbsp;·&nbsp; ○ Tersedia &nbsp;·&nbsp; 🔒 Coming Soon
+  </div>
+  <hr class="side-rule">
+  <p style="font-size:.76rem">Status materi dikontrol oleh dosen melalui <a href="../admin/login.html" style="color:var(--pine-600)">Admin Panel</a>.</p>
+</aside>
+    <div class="content">
+      <p class="eyebrow">MODULE 03 · MINGGU KE-03</p>
+      <h1>Threat Landscape & Attack Surface</h1>
+      <div class="meta-row">
+        <span class="pill">MITRE ATT&CK</span>
+        <span class="pill">Output: Threat Landscape Analysis</span>
+      </div>
+
+      <div class="block" data-locked-unless="week03:material">
+        <h2>🎯 Learning Objectives</h2>
+        <p>Setelah menyelesaikan materi ini, mahasiswa mampu:</p>
+        <ul style="list-style:disc;margin-left:20px"><li>Menjelaskan konsep threat landscape, attack surface, dan attack vector.</li><li>Mengidentifikasi jenis threat actor dan pola TTP (Tactics, Techniques, Procedures).</li><li>Mengenali jenis ancaman umum: phishing, ransomware, malware, insider threat, social engineering.</li><li>Menghubungkan analisis ancaman dengan kerangka kerja MITRE ATT&CK.</li></ul>
+
+        <h2 style="margin-top:1.6em">📖 THEORY</h2>
+        <h3>Threat Landscape & Attack Surface</h3><p>Threat landscape adalah gambaran menyeluruh tentang ancaman siber yang dihadapi suatu organisasi atau industri pada suatu waktu. Attack surface adalah keseluruhan titik yang berpotensi dimanfaatkan penyerang — mencakup aplikasi web, API, endpoint karyawan, hingga akun cloud. Semakin banyak sistem dan layanan yang terhubung ke internet, semakin luas attack surface-nya.</p><h3>Attack Vector & TTP</h3><p>Attack vector adalah jalur spesifik yang digunakan penyerang untuk mendapatkan akses awal, misalnya email phishing atau kredensial bocor. TTP (Tactics, Techniques, Procedures) menggambarkan pola perilaku penyerang: Tactics adalah tujuan umum (misal 'mendapatkan akses awal'), Techniques adalah cara mencapainya (misal 'spear phishing'), dan Procedures adalah implementasi spesifik yang digunakan kelompok penyerang tertentu.</p><h3>Jenis Ancaman Umum</h3><p>Phishing menipu korban agar membocorkan kredensial atau mengeklik tautan berbahaya. Ransomware mengenkripsi data korban dan meminta tebusan. Insider threat berasal dari individu yang memiliki akses sah namun bertindak merugikan, baik sengaja maupun tidak. Credential attack menargetkan kata sandi lemah atau bocor. Social engineering memanipulasi psikologi manusia, bukan celah teknis, untuk mendapatkan akses.</p><h3>MITRE ATT&CK</h3><p>MITRE ATT&CK adalah basis pengetahuan global yang mengkatalogkan taktik dan teknik penyerang berdasarkan observasi nyata di lapangan, disusun dalam matriks tahapan serangan. Framework ini membantu tim keamanan memahami, mendeteksi, dan merespons pola serangan secara terstruktur, serta menjadi bahasa umum antar praktisi keamanan di seluruh dunia.</p>
+        <div class="diagram"><svg viewBox="0 0 784 110" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--ink-soft)"/></marker></defs><rect x="10" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="76.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Attack Surface</text><line x1="142" y1="37.0" x2="168" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="168" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="234.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Threat Actor</text><line x1="300" y1="37.0" x2="326" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="326" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="392.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Attack Vector</text><line x1="458" y1="37.0" x2="484" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="484" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="550.0" y="37.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">TTP</text><line x1="616" y1="37.0" x2="642" y2="37.0" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#arrow)"/><rect x="642" y="10" width="132" height="54" rx="7" fill="none" stroke="var(--pine-600)" stroke-width="2"/><text x="708.0" y="30.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Potential</text><text x="708.0" y="44.0" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Impact</text></svg></div>
+        <h3>Example</h3><p>Sebuah perusahaan memiliki attack surface berupa: portal karyawan, VPN, dan akun email. Threat actor kelompok cybercrime mengirim email phishing (attack vector) yang meniru IT support, menggunakan teknik spear phishing dan credential harvesting (TTP), berujung pada akses tidak sah ke VPN perusahaan (impact).</p>
+        <h3>Case Study</h3><p>Sebuah perusahaan manufaktur mengalami insiden ransomware setelah seorang karyawan membuka lampiran email yang tampak seperti faktur dari vendor. Analisis TTP menunjukkan pola serupa dengan teknik yang tercatat dalam MITRE ATT&CK untuk tahap Initial Access melalui phishing attachment, diikuti Execution dan Impact berupa enkripsi file pada server produksi.</p>
+        <h3>Key Takeaways</h3><ul style="list-style:disc;margin-left:20px"><li>Attack surface adalah seluruh titik masuk potensial yang bisa dimanfaatkan penyerang.</li><li>TTP membantu memahami pola perilaku penyerang secara terstruktur.</li><li>Phishing, ransomware, dan social engineering adalah ancaman paling umum dihadapi organisasi.</li><li>MITRE ATT&CK memberi bahasa umum untuk memetakan dan mendeteksi pola serangan.</li></ul>
+      </div>
+
+      
+      <div class="block" style="background:var(--signal-soft);border-color:var(--signal)">
+        <h2 style="margin-bottom:6px">READY FOR PRACTICE?</h2>
+        <p>Setelah mempelajari materi minggu ini, lanjutkan ke <strong>Threat Landscape Analysis</strong> untuk menerapkan konsep secara hands-on.</p>
+        <a class="btn btn-primary" href="../practical/practical-03.html" data-practice-link>🧪 MULAI PRAKTIK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/notes.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

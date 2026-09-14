@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a href="../index.html" class="brand"><span class="mark">COM</span><span class="name">Cybersecurity Learning<small>Admin</small></span></a>
+  <div class="nav-actions"><button class="icon-btn" data-theme-toggle>🌙</button></div>
+</div></nav>
+
+<div class="login-box">
+  <p class="eyebrow">ADMIN PANEL</p>
+  <h1 style="font-size:1.4rem">Masuk sebagai Admin</h1>
+  <p style="font-size:.86rem">Kelola status Publish/Hide Materi dan Praktik per minggu.</p>
+  <div class="field">
+    <label>Username</label>
+    <input type="text" id="admin-user" placeholder="dosen">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" id="admin-pass" placeholder="••••••••">
+  </div>
+  <button class="btn btn-primary btn-block" id="admin-login-btn">Masuk</button>
+  <div class="notice">
+    <strong>Demo Only:</strong> Login ini simulasi client-side untuk keperluan demo alur admin dan <strong>tidak</strong> menyimpan kredensial administrator sungguhan di JavaScript. Untuk produksi, gunakan Firebase Authentication + Firestore atau Supabase Auth + Database. Lihat README.md.
+  </div>
+</div>
+
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+document.getElementById("admin-login-btn").addEventListener("click", () => {
+  const u = document.getElementById("admin-user").value.trim();
+  const p = document.getElementById("admin-pass").value.trim();
+  if(u && p){
+    window.ComContent.demoLogin();
+    location.href = "index.html";
+  } else {
+    alert("Masukkan username dan password (demo — nilai apa pun diterima).");
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minggu 07 — Secure Architecture & Zero Trust · COM Cybersecurity Learning</title>
+<meta name="description" content="Platform pembelajaran mata kuliah Keamanan Siber, Program Studi Teknik Komputer, Universitas Warmadewa.">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">
+      <span class="mark">COM</span>
+      <span class="name">Cybersecurity Learning<small>Teknik Komputer · Univ. Warmadewa</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" class="">Home</a>
+      <a href="../index.html#learning-path" class="active">Learning Path</a>
+      <a href="../dashboard.html" class="">Dashboard</a>
+      <a href="../about.html" class="">About</a>
+      <a href="../references.html" class="">References</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="section" style="padding-top:36px">
+  <div class="wrap detail-layout">
+    
+<aside class="sidebar">
+  <h4>COURSE CONTENT</h4>
+  <ul>
+    <li class="side-item " data-week="week01" onclick="location.href='../weeks/week01.html'">
+          <span class="ic">○</span> Minggu 01 — Introduction to Cybersecurity</li><li class="side-item " data-week="week02" onclick="location.href='../weeks/week02.html'">
+          <span class="ic">○</span> Minggu 02 — Asset, Threat, Vulnerability & Risk</li><li class="side-item " data-week="week03" onclick="location.href='../weeks/week03.html'">
+          <span class="ic">○</span> Minggu 03 — Threat Landscape & Attack Surface</li><li class="side-item " data-week="week04" onclick="location.href='../weeks/week04.html'">
+          <span class="ic">○</span> Minggu 04 — Authentication & Access Control</li><li class="side-item " data-week="week05" onclick="location.href='../weeks/week05.html'">
+          <span class="ic">○</span> Minggu 05 — Cryptography & Data Protection</li><li class="side-item " data-week="week06" onclick="location.href='../weeks/week06.html'">
+          <span class="ic">○</span> Minggu 06 — Network Security Fundamentals</li><li class="side-item current" data-week="week07" onclick="location.href='../weeks/week07.html'">
+          <span class="ic">○</span> Minggu 07 — Secure Architecture & Zero Trust</li><li class="side-item " data-week="week08" onclick="location.href='../weeks/week08.html'">
+          <span class="ic">○</span> Minggu 08 — UTS</li><li class="side-item " data-week="week09" onclick="location.href='../weeks/week09.html'">
+          <span class="ic">○</span> Minggu 09 — Web & Application Security</li><li class="side-item " data-week="week10" onclick="location.href='../weeks/week10.html'">
+          <span class="ic">○</span> Minggu 10 — Endpoint & Malware Security</li><li class="side-item " data-week="week11" onclick="location.href='../weeks/week11.html'">
+          <span class="ic">○</span> Minggu 11 — Vulnerability Management</li><li class="side-item " data-week="week12" onclick="location.href='../weeks/week12.html'">
+          <span class="ic">○</span> Minggu 12 — Security Monitoring & Incident Response</li><li class="side-item " data-week="week13" onclick="location.href='../weeks/week13.html'">
+          <span class="ic">○</span> Minggu 13 — Cyber Attack Lifecycle</li><li class="side-item " data-week="week14" onclick="location.href='../weeks/week14.html'">
+          <span class="ic">○</span> Minggu 14 — Digital Forensics Fundamentals</li><li class="side-item " data-week="week15" onclick="location.href='../weeks/week15.html'">
+          <span class="ic">○</span> Minggu 15 — Current Cybersecurity Trends</li><li class="side-item " data-week="week16" onclick="location.href='../weeks/week16.html'">
+          <span class="ic">○</span> Minggu 16 — Final Project & Security Assessment</li>
+  </ul>
+  <hr class="side-rule">
+  <h4>LEGEND</h4>
+  <div style="font-size:.76rem;color:var(--ink-soft);line-height:2">
+    ✓ Selesai &nbsp;·&nbsp; ◉ Sedang dibuka &nbsp;·&nbsp; ○ Tersedia &nbsp;·&nbsp; 🔒 Coming Soon
+  </div>
+  <hr class="side-rule">
+  <p style="font-size:.76rem">Status materi dikontrol oleh dosen melalui <a href="../admin/login.html" style="color:var(--pine-600)">Admin Panel</a>.</p>
+</aside>
+    <div class="content">
+      <p class="eyebrow">MODULE 07 · MINGGU KE-07</p>
+      <h1>Secure Architecture & Zero Trust</h1>
+      <div class="meta-row">
+        <span class="pill">NIST</span>
+        <span class="pill">Output: Secure Network Design</span>
+      </div>
+
+      <div class="block" data-locked-unless="week07:material">
+        <h2>🎯 Learning Objectives</h2>
+        <p>Setelah menyelesaikan materi ini, mahasiswa mampu:</p>
+        <ul style="list-style:disc;margin-left:20px"><li>Menjelaskan prinsip Defense in Depth.</li><li>Menjelaskan fungsi DMZ dan network segmentation dalam arsitektur aman.</li><li>Menjelaskan prinsip Zero Trust: Never Trust, Always Verify.</li><li>Merancang diagram jaringan aman sederhana untuk sebuah skenario.</li></ul>
+
+        <h2 style="margin-top:1.6em">📖 THEORY</h2>
+        <h3>Defense in Depth</h3><p>Defense in Depth adalah strategi menerapkan berlapis-lapis kontrol keamanan, sehingga jika satu lapisan gagal, lapisan berikutnya tetap dapat mencegah atau membatasi dampak serangan — analog dengan benteng yang memiliki banyak lapisan pertahanan, bukan hanya satu gerbang.</p><h3>DMZ & Segmentation</h3><p>Demilitarized Zone (DMZ) adalah segmen jaringan terpisah yang menempatkan server yang perlu diakses dari internet (misal web server) di luar jaringan internal, sehingga jika server tersebut dikompromikan, penyerang tidak langsung mendapat akses ke jaringan internal yang lebih sensitif.</p><h3>Zero Trust Architecture</h3><p>Zero Trust adalah model keamanan dengan prinsip 'Never Trust, Always Verify' — tidak ada pengguna atau perangkat yang dipercaya secara default, bahkan jika sudah berada di dalam jaringan internal. Setiap permintaan akses harus diverifikasi ulang berdasarkan identitas, kondisi perangkat, dan konteks, dengan akses yang diberikan seminimal mungkin (least privilege).</p>
+        <div class="diagram"><svg viewBox="0 0 520 260" width="460" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--ink-soft)"/></marker></defs>
+  <text x="30" y="20" font-family="IBM Plex Mono" font-size="12" fill="var(--ink)">Internet</text>
+  <line x1="60" y1="28" x2="60" y2="55" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="15" y="55" width="90" height="36" rx="6" fill="none" stroke="var(--threat-red)" stroke-width="2"/>
+  <text x="60" y="77" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink)">Firewall</text>
+  <line x1="60" y1="91" x2="60" y2="118" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="10" y="118" width="220" height="90" rx="6" fill="none" stroke="var(--warn-amber)" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="120" y="132" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--warn-amber)">DMZ</text>
+  <rect x="25" y="145" width="90" height="40" rx="6" fill="none" stroke="var(--learn-blue)" stroke-width="2"/>
+  <text x="70" y="169" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink)">Web Server</text>
+  <rect x="130" y="145" width="90" height="40" rx="6" fill="none" stroke="var(--learn-blue)" stroke-width="2"/>
+  <text x="175" y="169" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink)">Reverse Proxy</text>
+  <line x1="230" y1="163" x2="270" y2="163" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="270" y="118" width="230" height="90" rx="6" fill="none" stroke="var(--signal)" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="385" y="132" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--signal)">Internal Network</text>
+  <rect x="285" y="145" width="95" height="40" rx="6" fill="none" stroke="var(--pine-600)" stroke-width="2"/>
+  <text x="332" y="169" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink)">App Server</text>
+  <rect x="390" y="145" width="95" height="40" rx="6" fill="none" stroke="var(--pine-600)" stroke-width="2"/>
+  <text x="437" y="169" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink)">Database</text>
+</svg></div>
+        <h3>Example</h3><p>Sebuah universitas menempatkan portal pendaftaran online (yang diakses publik) pada DMZ dengan firewall terpisah, sementara sistem informasi akademik internal (yang menyimpan data lengkap mahasiswa) berada pada jaringan internal yang hanya bisa diakses melalui reverse proxy dan autentikasi tambahan dari DMZ.</p>
+        <h3>Case Study</h3><p>Sebuah perusahaan menerapkan model Zero Trust setelah insiden di mana akun karyawan yang bekerja remote dikompromikan dan digunakan untuk mengakses seluruh sumber daya internal tanpa verifikasi tambahan karena dianggap 'sudah terhubung ke VPN perusahaan'. Setelah menerapkan Zero Trust, setiap permintaan akses — meski berasal dari VPN — tetap diverifikasi ulang berdasarkan identitas, kondisi perangkat, dan kebutuhan akses spesifik.</p>
+        <h3>Key Takeaways</h3><ul style="list-style:disc;margin-left:20px"><li>Defense in Depth mengandalkan banyak lapisan kontrol, bukan satu titik pertahanan.</li><li>DMZ memisahkan layanan publik dari jaringan internal yang lebih sensitif.</li><li>Zero Trust tidak memberi kepercayaan otomatis meskipun pengguna sudah berada 'di dalam' jaringan.</li><li>Arsitektur aman dirancang dengan mempertimbangkan segmentation, monitoring, dan least privilege sejak awal.</li></ul>
+      </div>
+
+      
+      <div class="block" style="background:var(--signal-soft);border-color:var(--signal)">
+        <h2 style="margin-bottom:6px">READY FOR PRACTICE?</h2>
+        <p>Setelah mempelajari materi minggu ini, lanjutkan ke <strong>Secure Network Architecture</strong> untuk menerapkan konsep secara hands-on.</p>
+        <a class="btn btn-primary" href="../practical/practical-07.html" data-practice-link>🧪 MULAI PRAKTIK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 COM Cybersecurity Learning — Program Studi Teknik Komputer, Fakultas Teknik dan Perencanaan, Universitas Warmadewa.</p>
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../references.html">References</a>
+      <a href="../admin/login.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/course-config.js"></script>
+<script src="../assets/js/content-control.js"></script>
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/notes.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
